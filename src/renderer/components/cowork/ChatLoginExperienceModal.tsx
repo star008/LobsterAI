@@ -10,9 +10,9 @@ interface ChatLoginExperienceModalProps {
 }
 
 const ChatLoginExperienceModal: React.FC<ChatLoginExperienceModalProps> = ({
-  loginPending,
+  loginPending: _loginPending,
   onClose,
-  onStart,
+  onStart: _onStart,
 }) => {
   return (
     <Modal
@@ -38,7 +38,7 @@ const ChatLoginExperienceModal: React.FC<ChatLoginExperienceModalProps> = ({
           <span className="block">{i18nService.t('chatLoginExperiencePromoLine1')}</span>
           <span className="block">{i18nService.t('chatLoginExperiencePromoLine2')}</span>
         </p>
-        <button
+        {/* <button
           type="button"
           onClick={onStart}
           disabled={loginPending}
@@ -47,7 +47,7 @@ const ChatLoginExperienceModal: React.FC<ChatLoginExperienceModalProps> = ({
           <span className="relative">
             {i18nService.t(loginPending ? 'chatLoginExperienceStarting' : 'chatLoginExperienceStart')}
           </span>
-        </button>
+        </button> */}
       </div>
     </Modal>
   );

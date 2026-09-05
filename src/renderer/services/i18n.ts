@@ -444,8 +444,8 @@ const translations: Record<LanguageType, Record<string, string>> = {
     authLoginRequired: '请先登录后再开始对话。',
     authLoginRequiredBtn: '登录',
     chatLoginExperienceTitlePrefix: '欢迎使用',
-    chatLoginExperiencePromoLine1: '新朋友限时送百万Token，',
-    chatLoginExperiencePromoLine2: '登录后，获取积分可使用套餐模型。',
+    chatLoginExperiencePromoLine1: '请设置大模型参数',
+    chatLoginExperiencePromoLine2: '配置可用模型与 API Key 后即可开始对话。',
     chatLoginExperienceStart: '开始体验',
     chatLoginExperienceStarting: '正在打开...',
     authQuotaExhausted:
@@ -4243,8 +4243,8 @@ const translations: Record<LanguageType, Record<string, string>> = {
     authLoginRequired: 'Please log in to start a conversation.',
     authLoginRequiredBtn: 'Log In',
     chatLoginExperienceTitlePrefix: 'Welcome to',
-    chatLoginExperiencePromoLine1: 'New users get 1M tokens for a limited time.',
-    chatLoginExperiencePromoLine2: 'Sign in to earn credits and use plan models.',
+    chatLoginExperiencePromoLine1: 'Please configure the model settings',
+    chatLoginExperiencePromoLine2: 'Set up a model and API key to start chatting.',
     chatLoginExperienceStart: 'Start',
     chatLoginExperienceStarting: 'Opening...',
     authQuotaExhausted:

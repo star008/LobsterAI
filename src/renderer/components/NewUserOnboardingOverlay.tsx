@@ -598,7 +598,7 @@ const PromptResultPopover: React.FC<{
   viewportHeight: number;
   onSkip: () => void;
   onStartExperience: () => void;
-}> = ({ rect, viewportWidth, viewportHeight, onSkip, onStartExperience }) => {
+}> = ({ rect, viewportWidth, viewportHeight, onSkip, onStartExperience: _onStartExperience }) => {
   const desiredPopoverWidth = Math.min(
     Math.max(rect.width * 0.72, PROMPT_RESULT_POPOVER_MIN_WIDTH),
     PROMPT_RESULT_POPOVER_MAX_WIDTH,
@@ -705,7 +705,7 @@ const PromptResultPopover: React.FC<{
             >
               {i18nService.t('newUserOnboardingSkip')}
             </button>
-            <div className="relative">
+            {/* <div className="relative">
               <button
                 type="button"
                 onClick={onStartExperience}
@@ -713,7 +713,7 @@ const PromptResultPopover: React.FC<{
               >
                 {i18nService.t('newUserOnboardingStartExperience')}
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

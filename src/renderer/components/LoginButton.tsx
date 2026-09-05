@@ -859,14 +859,11 @@ const LoginButton: React.FC<LoginButtonProps> = ({
 
   return (
     <div ref={containerRef} className="relative">
+      {!useSidebarPromoLogin && (
       <button
         type="button"
         onClick={handleClick}
-        className={
-          useSidebarPromoLogin
-            ? 'sidebar-login-rainbow inline-flex h-7 w-[5.75rem] shrink-0 cursor-pointer items-center justify-center whitespace-nowrap rounded-md px-2.5 text-[13px] font-medium leading-none transition-[filter,transform]'
-            : 'inline-flex h-7 items-center justify-start gap-2 rounded-md px-1.5 text-sm font-normal text-foreground/80 transition-colors hover:bg-black/[0.03] dark:hover:bg-white/[0.04] cursor-pointer'
-        }
+        className="inline-flex h-7 items-center justify-start gap-2 rounded-md px-1.5 text-sm font-normal text-foreground/80 transition-colors hover:bg-black/[0.03] dark:hover:bg-white/[0.04] cursor-pointer"
       >
         {isLoggedIn ? (
           <>
@@ -878,16 +875,13 @@ const LoginButton: React.FC<LoginButtonProps> = ({
             <span className="truncate max-w-[80px]">{i18nService.t('myAccount')}</span>
           </>
         ) : (
-          useSidebarPromoLogin ? (
-            i18nService.t('sidebarLoginNow')
-          ) : (
-            <>
-              <UserAvatarIcon className="h-4 w-4 shrink-0" />
-              {i18nService.t('login')}
-            </>
-          )
+          <>
+            <UserAvatarIcon className="h-4 w-4 shrink-0" />
+            {i18nService.t('login')}
+          </>
         )}
       </button>
+      )}
       {showMenu && isLoggedIn && (
         enterpriseAccountContext
           ? (

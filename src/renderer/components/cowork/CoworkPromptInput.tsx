@@ -495,7 +495,7 @@ const CoworkPromptInput = React.forwardRef<CoworkPromptInputRef, CoworkPromptInp
       steerPreviewPortalTarget,
       canSteer = false,
       remoteManaged = false,
-      showNewUserWelcomeLoginOverlay = false,
+      showNewUserWelcomeLoginOverlay: _showNewUserWelcomeLoginOverlay = false,
     } = props;
     const dispatch = useDispatch();
     const draftKey = sessionId || '__home__';
@@ -2834,7 +2834,7 @@ const CoworkPromptInput = React.forwardRef<CoworkPromptInputRef, CoworkPromptInp
     && !agentModelIsInvalid
     && (effectiveModelIsAvailable || resolveSubmitModelAccessPrompt() === ModelAccessPromptKind.Login)
     && (!!activeTextareaValue.trim() || (!steerInputActive && (hasAttachments || browserAnnotationBatches.length > 0)));
-  const showNewUserWelcomeLockOverlay = showNewUserWelcomeLoginOverlay && !isLoggedIn;
+  // showNewUserWelcomeLockOverlay removed (button hidden)
   const enhancedContainerClass = isDraggingFiles
     ? `${containerClass} ring-2 ring-primary/50 border-primary/60`
     : containerClass;
@@ -3773,7 +3773,7 @@ const CoworkPromptInput = React.forwardRef<CoworkPromptInputRef, CoworkPromptInp
             {i18nService.t('coworkDropFileHint')}
           </div>
         )}
-        {showNewUserWelcomeLockOverlay && (
+        {/* {showNewUserWelcomeLockOverlay && (
           <div className="absolute inset-0 z-40 flex items-center justify-center rounded-[inherit] bg-white/75 backdrop-blur-[1.5px] dark:bg-black/45">
             <button
               type="button"
@@ -3787,7 +3787,7 @@ const CoworkPromptInput = React.forwardRef<CoworkPromptInputRef, CoworkPromptInp
               </span>
             </button>
           </div>
-        )}
+        )} */}
         {isLarge ? (
           useHomeContextLayout ? (
             <>
